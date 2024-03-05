@@ -1,0 +1,1235 @@
+﻿* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url(./images/clouds.jpg) no-repeat 50% 50% / cover;
+}
+
+.header {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+
+nav .hm {
+    padding: 6px 15px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+}
+
+/**floating carousel**/
+#myImg {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgbox {
+    position: relative;
+    width: 500px;
+    height: 40vh;
+    display: flex;
+    align-items: first baseline;
+    justify-content: center;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate{
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.imgbox .img-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 500px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 95deg)) translateZ(400px) rotateZ(8deg);
+}
+
+.imgbox .img-holder  img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+img {
+    max-width: 350px;
+    max-height: 450px;
+}
+
+.textcont {
+    width: 500px;
+    height: 450px;
+}
+
+.textcont .abt {
+    font-size: 180px;
+    text-align: center;
+    color: #ECECEC;
+}
+
+.textcont .me {
+    font-size: 180px;
+    text-align: center;
+    color: #ECECEC;
+}
+
+/**card**/
+#myProf {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    z-index: 1;
+    padding: 120px;
+}
+
+/**card 1**/
+.container .card-1 {
+    position: relative;
+    width: 600px;
+    height: 800px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.container .card-1 .content {
+    padding: 50px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.container .card-1 .content h2 {
+    position: absolute;
+    top: -25px;
+    right: 15px;
+    font-size: 11em;
+    color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container .card-1 .content h3 {
+    font-size: 5em;
+    color: #fff;
+    z-index: 1;
+    margin: 100px 0px 40px 0px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container .card-1 .content #nm {
+    font-size: 1.48em;
+    color: #fff;
+    text-align: left;
+    padding-bottom: 20px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.container .card-1 .content #nicknm {
+    font-size: 1.48em;
+    color: #fff;
+    text-align: left;
+    padding-bottom: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container .card-1 .content #stuid {
+    font-size: 1.48em;
+    color: #fff;
+    text-align: left;
+    padding-bottom: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container .card-1 .content #bday {
+    font-size: 1.48em;
+    color: #fff;
+    text-align: left;
+    padding-bottom: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container .card-1 .content #age {
+    font-size: 1.48em;
+    color: #fff;
+    text-align: left;
+    padding-bottom: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container .card-1 .content #adress {
+    font-size: 1.48em;
+    color: #fff;
+    text-align: left;
+    padding-bottom: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container .card-1 .content #mail {
+    font-size: 1.4em;
+    color: #fff;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+/**card 2**/
+.container .card-2 {
+    position: relative;
+    width: 1200px;
+    height: 800px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.container .card-2 .content {
+    padding: 50px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.container .card-2 .content h2 {
+    position: absolute;
+    top: -25px;
+    right: 15px;
+    font-size: 11em;
+    color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.container .card-2 .content h3 {
+    font-size: 6em;
+    color: #fff;
+    z-index: 1;
+    margin: 100px 0px 40px 0px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.sccontent {
+    /**background-color: antiquewhite;**/
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1000px;
+    height: 400px;
+}
+
+
+.sccontent .primary {
+    max-width: 300px;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.26);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.sccontent .primary h4 {
+    font-size: 2em;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+
+.sccontent .primary img {
+    max-width: 200px;
+    width: 100%;
+    height: 190px;
+    border-radius: 60%;
+    margin-top : 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.sccontent .primary p {
+    font-size: 1.3em;
+    padding: 30px;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.sccontent .midsc {
+    max-width: 300px;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.26);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.sccontent .midsc h4 {
+    font-size: 2em;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.sccontent .midsc img {
+    max-width: 190px;
+    width: 100%;
+    height: 190px;
+    border-radius: 60%;
+    margin-top : 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.sccontent .midsc p {
+    font-size: 1.3em;
+    padding: 30px;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.sccontent .highsc {
+    max-width: 300px;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.26);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.sccontent .highsc h4 {
+    font-size: 2em;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.sccontent .highsc img {
+    max-width: 190px;
+    width: 100%;
+    height: 190px;
+    border-radius: 60%;
+    margin-top : 30px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.sccontent .highsc p {
+    font-size: 1.3em;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+/**card 4**/
+.container .card-4 {
+    position: relative;
+    width: 500px;
+    height: 800px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.container .card-4 .content {
+    padding: 50px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.container .card-4 .content h2 {
+    position: absolute;
+    top: -25px;
+    right: 15px;
+    font-size: 11em;
+    color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.container .card-4 .content h3 {
+    font-size: 5em;
+    color: #fff;
+    z-index: 1;
+    margin: -30px 0px 70px 0px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.container .card-4 .content #job {
+    font-size: 1.7em;
+    color: #fff;
+    text-align: left;
+    padding-bottom: 20px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.container .card-4 .content #health {
+    font-size: 1.7em;
+    color: #fff;
+    text-align: left;
+    padding-bottom: 20px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.container .card-4 .content #rich {
+    font-size: 1.7em;
+    color: #fff;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+
+/**card 3**/
+.container .card-3 {
+    position: relative;
+    width: 1300px;
+    height: 800px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.container .card-3 .content {
+    padding: 50px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.container .card-3 .content h2 {
+    position: absolute;
+    top: -25px;
+    right: 15px;
+    font-size: 11em;
+    color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.container .card-3 .content h3 {
+    font-size: 6em;
+    color: #fff;
+    z-index: 1;
+    margin-top: 50px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+
+.hbcontent {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1150px;
+    height: 500px;
+}
+
+.hbcontent .listenin {
+    max-width: 350px;
+    width: 100%;
+    max-height: 470px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.26);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.hbcontent .listenin img {
+    max-width: 320px;
+    width: 100%;
+    height: 320px;
+    margin-top: -30px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.hbcontent .listenin h4 {
+    font-size: 2em;
+    padding: 30px;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.hbcontent .listenin p {
+    font-size: 1.24em;
+    padding: 20px;
+    color: #fff;
+    margin-top: -50px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.hbcontent .watchin {
+    max-width: 350px;
+    width: 100%;
+    max-height: 470px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.26);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.hbcontent .watchin img {
+    max-width: 300px;
+    width: 100%;
+    height: 300px;
+    margin-top: -30px;
+}
+
+.hbcontent .watchin h4 {
+    font-size: 2em;
+    padding: 30px;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.hbcontent .watchin p {
+    font-size: 1.24em;
+    padding: 20px;
+    color: #fff;
+    margin-top: -30px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.hbcontent .readin {
+    max-width: 350px;
+    width: 100%;
+    max-height: 470px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.26);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+.hbcontent .readin img {
+    max-width: 300px;
+    width: 100%;
+    height: 300px;
+    margin-top: -30px;
+}
+
+.hbcontent .readin h4 {
+    font-size: 2em;
+    padding: 30px;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.hbcontent .readin p {
+    font-size: 1.24em;
+    padding: 20px;
+    color: #fff;
+    margin-top: -30px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+
+/**About in ipad size**/
+@media screen and (max-width: 2000px) and (max-height: 2000px) {
+    .header {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 30px;
+    }
+
+    nav .hm {
+        padding: 6px 15px;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        font-size: 25px;
+        color: #fff;
+        font-family: 'Roboto Mono', monospace;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .main {
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    /**floating carousel**/
+    #myImg {
+        width: 100%;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgbox {
+        position: relative;
+        width: 200px;
+        height: 45vh;
+        display: flex;
+        align-items: first baseline;
+        justify-content: center;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        animation: animate 20s linear infinite;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        100% {
+            transform: perspective(1000px) rotateY(360deg);
+        }
+    }
+
+    .imgbox .img-holder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 360px;
+        max-height: 300px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i) * 95deg)) translateZ(350px) rotateZ(8deg);
+    }
+
+        .imgbox .img-holder img {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+    img {
+        max-width: 230px;
+        max-height: 300px;
+    }
+
+    .textcont {
+        width: 250px;
+        height: 150px;
+    }
+
+        .textcont .abt {
+            font-size: 110px;
+            text-align: center;
+            color: #ECECEC;
+        }
+
+        .textcont .me {
+            font-size: 110px;
+            text-align: center;
+            color: #ECECEC;
+        }
+
+    /**card**/
+    #myProf {
+        max-width: 1400px;
+        min-height: 100vh;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        z-index: 1;
+        padding: 120px;
+    }
+
+        /**card 1**/
+        .container .card-1 {
+            position: relative;
+            width: 245px;
+            height: 600px;
+            margin: 10px;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+            .container .card-1 .content {
+                padding: 30px;
+                text-align: center;
+                transition: 0.5s;
+            }
+
+                .container .card-1 .content h2 {
+                    position: absolute;
+                    top: -8px;
+                    right: 15px;
+                    font-size: 5em;
+                    color: rgba(255, 255, 255, 0.3);
+                    pointer-events: none;
+                    font-family: 'Roboto Mono', monospace;
+                }
+
+                .container .card-1 .content h3 {
+                    font-size: 3em;
+                    color: rgba(255, 255, 255, 0.6);
+                    z-index: 1;
+                    text-align: left;
+                    margin: 30px 0px 20px 0px;
+                    font-family: 'Roboto Mono', monospace;
+                }
+
+                .container .card-1 .content #nm {
+                    font-size: 1em;
+                    color: #fff;
+                    text-align: left;
+                    padding-bottom: 2px;
+                    font-family: 'Roboto Mono', monospace;
+                }
+
+                .container .card-1 .content #nicknm {
+                    font-size: 1em;
+                    color: #fff;
+                    text-align: left;
+                    padding-bottom: 2px;
+                    font-family: 'Roboto Mono', monospace;
+                }
+
+                .container .card-1 .content #stuid {
+                    font-size: 1em;
+                    color: #fff;
+                    text-align: left;
+                    padding-bottom: 2px;
+                    font-family: 'Roboto Mono', monospace;
+                }
+
+                .container .card-1 .content #bday {
+                    font-size: 1em;
+                    color: #fff;
+                    text-align: left;
+                    padding-bottom: 2px;
+                    font-family: 'Roboto Mono', monospace;
+                }
+
+                .container .card-1 .content #age {
+                    font-size: 1em;
+                    color: #fff;
+                    text-align: left;
+                    padding-bottom: 2px;
+                    font-family: 'Roboto Mono', monospace;
+                }
+
+                .container .card-1 .content #adress {
+                    font-size: 1em;
+                    color: #fff;
+                    text-align: left;
+                    padding-bottom: 2px;
+                    font-family: 'Roboto Mono', monospace;
+                }
+
+                .container .card-1 .content #mail {
+                    font-size: 0.85em;
+                    color: #fff;
+                    text-align: left;
+                    font-family: 'Roboto Mono', monospace;
+                }
+
+
+        /**card 2**/
+        .container .card-2 {
+            position: relative;
+            width: 550px;
+            height: 600px;
+            margin: 10px;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+            .container .card-2 .content {
+                padding: 50px;
+                text-align: center;
+                transition: 0.5s;
+            }
+
+                .container .card-2 .content h2 {
+                    position: absolute;
+                    top: -9px;
+                    right: 15px;
+                    font-size: 5em;
+                    color: rgba(255, 255, 255, 0.3);
+                    pointer-events: none;
+                    font-family: 'Roboto Mono', monospace;
+                }
+
+                .container .card-2 .content h3 {
+                    font-size: 4.5em;
+                    color: rgba(255, 255, 255, 0.6);
+                    z-index: 1;
+                    margin: 50px 0px 40px 0px;
+                    font-family: 'Roboto Mono', monospace;
+                }
+
+    .sccontent {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: -50px;
+        width: 500px;
+        height: 350px;
+    }
+
+
+        .sccontent .primary {
+            max-width: 150px;
+            width: 100%;
+            max-height: 300px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.26);
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+            border-radius: 40px;
+        }
+
+            .sccontent .primary h4 {
+                font-size: 1.3em;
+                padding: 20px;
+                color: #fff;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+
+            .sccontent .primary img {
+                max-width: 90px;
+                width: 100%;
+                height: 100px;
+                border-radius: 60%;
+                margin-top: 15px;
+                box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+            }
+
+            .sccontent .primary p {
+                font-size: 0.85em;
+                text-align: center;
+                margin-top: 25px;
+                padding: 10px;
+                color: #fff;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+        .sccontent .midsc {
+            max-width: 150px;
+            width: 100%;
+            max-height: 300px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.26);
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+            border-radius: 40px;
+        }
+
+            .sccontent .midsc h4 {
+                font-size: 1.3em;
+                padding: 20px;
+                color: #fff;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+            .sccontent .midsc img {
+                max-width: 90px;
+                width: 100%;
+                height: 100px;
+                border-radius: 60%;
+                margin-top: 0px;
+                box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+            }
+
+            .sccontent .midsc p {
+                font-size: 0.85em;
+                margin-top: 15px;
+                padding: 10px;
+                color: #fff;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+        .sccontent .highsc {
+            max-width: 150px;
+            width: 100%;
+            max-height: 300px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.26);
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+            border-radius: 40px;
+        }
+
+            .sccontent .highsc h4 {
+                font-size: 1.3em;
+                padding: 20px;
+                color: #fff;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+            .sccontent .highsc img {
+                max-width: 90px;
+                width: 100%;
+                height: 100px;
+                border-radius: 60%;
+                margin-top: 0px;
+                box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+            }
+
+            .sccontent .highsc p {
+                font-size: 0.85em;
+                margin-top: 15px;
+                padding: 10px;
+                color: #fff;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+    /**card 4**/
+    .container .card-4 {
+        position: relative;
+        width: 200px;
+        height: 600px;
+        margin: 10px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+    }
+
+        .container .card-4 .content {
+            padding: 50px;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+            .container .card-4 .content h2 {
+                position: absolute;
+                top: -9px;
+                right: 15px;
+                font-size: 5em;
+                color: rgba(255, 255, 255, 0.3);
+                pointer-events: none;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+            .container .card-4 .content h3 {
+                font-size: 3em;
+                color: rgba(255, 255, 255, 0.6);
+                z-index: 1;
+                text-align: left;
+                margin: 0px 0px 30px 0px;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+            .container .card-4 .content #job {
+                font-size: 0.85em;
+                color: #fff;
+                text-align: left;
+                padding-bottom: 10px;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+            .container .card-4 .content #health {
+                font-size: 0.85em;
+                color: #fff;
+                text-align: left;
+                padding-bottom: 10px;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+            .container .card-4 .content #rich {
+                font-size: 0.85em;
+                color: #fff;
+                text-align: left;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+
+    /**card 3**/
+    .container .card-3 {
+        position: relative;
+        width: 600px;
+        height: 600px;
+        margin: 10px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+    }
+
+        .container .card-3 .content {
+            padding: 50px;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+            .container .card-3 .content h2 {
+                position: absolute;
+                top: -9px;
+                right: 15px;
+                font-size: 5em;
+                color: rgba(255, 255, 255, 0.3);
+                pointer-events: none;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+            .container .card-3 .content h3 {
+                font-size: 4em;
+                color: rgba(255, 255, 255, 0.6);
+                z-index: 1;
+                margin-top: -10px;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+
+    .hbcontent {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 500px;
+        height: 350px;
+        margin-top: 20px;
+    }
+
+        .hbcontent .listenin {
+            max-width: 150px;
+            width: 100%;
+            max-height: 300px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.26);
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+            border-radius: 40px;
+        }
+
+            .hbcontent .listenin img {
+                max-width: 110px;
+                width: 100%;
+                height: 110px;
+                margin-top: -35px;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+            .hbcontent .listenin h4 {
+                font-size: 1.15em;
+                padding: 30px;
+                color: #fff;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+            .hbcontent .listenin p {
+                font-size: 0.8em;
+                padding: 20px;
+                color: #fff;
+                margin-top: -35px;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+        .hbcontent .watchin {
+            max-width: 150px;
+            width: 100%;
+            max-height: 300px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.26);
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+            border-radius: 40px;
+        }
+
+            .hbcontent .watchin img {
+                max-width: 100px;
+                width: 100%;
+                height: 100px;
+                margin-top: -30px;
+            }
+
+            .hbcontent .watchin h4 {
+                font-size: 1.15em;
+                padding: 30px;
+                color: #fff;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+            .hbcontent .watchin p {
+                font-size: 0.8em;
+                padding: 20px;
+                color: #fff;
+                margin-top: -30px;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+        .hbcontent .readin {
+            max-width: 150px;
+            width: 100%;
+            max-height: 300px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.26);
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+            border-radius: 40px;
+        }
+
+            .hbcontent .readin img {
+                max-width: 100px;
+                width: 100%;
+                height: 100px;
+                margin-top: -30px;
+            }
+
+            .hbcontent .readin h4 {
+                font-size: 1.15em;
+                padding: 30px;
+                color: #fff;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+            .hbcontent .readin p {
+                font-size: 0.8em;
+                padding: 20px;
+                color: #fff;
+                margin-top: -30px;
+                font-family: 'Roboto Mono', monospace;
+            }
+}
