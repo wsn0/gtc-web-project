@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="abtStyles.css" />
+
+    <title>About Me</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav>
+            <a href="index.html"><h1 class="hm">Home</h1></a>
+        </nav>
+    </header>
+    <main class="main" id="main">
+        <section class="image section" id="myImg">
+            <div class="imgbox">
+                <div class="img-holder" style="--i:1;">
+                    <img src="images/img1.jpg" />
+                </div>
+                <div class="img-holder" style="--i:2;">
+                    <img src="images/img2.jpg" />
+                </div>
+                <div class="img-holder" style="--i:3;">
+                    <img src="images/img3.jpg" />
+                </div>
+                <div class="img-holder" style="--i:4;">
+                    <img src="images/img4.jpg" />
+                </div>
+                <div class="textcont">
+                    <h1 class="abt">About</h1>
+                    <h1 class="me">Me</h1>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="profile section" id="myProf">
+            <div class="container">
+                <!--card 1-->
+                <div class="card-1">
+                    <div class="content">
+                        <h2>01</h2>
+                        <h3>About me</h3>
+                        <p id="nm">Name : Pakaporn Peamsanga</p>
+                        <p id="nicknm">Nickname : Woonsen</p>
+                        <p id="stuid">ID : 6604062630404</p>
+                        <p id="bday">Date of birth : 08 Feb 2548</p>
+                        <p id="age">Age : 18 years old</p>
+                        <p id="adress">Adress :  7/7 Sub-area Banpuek District Meung Chonburi Province Chonburi</p>
+                        <p id="mail">E-mail : pakapornwpeamsanga@gmail.com</p>
+                    </div>
+                </div>
+                <!--card 2-->
+                <div class="card-2">
+                    <div class="content">
+                        <h2>02</h2>
+                        <h3>Education</h3>
+                        <div class="sccontent">
+                            <div class="primary">
+                                <h4>Primary</h4>
+                                <img src="images/pri.png" />
+                                <p>Anubanchonburi School</p>
+                            </div>
+                            <div class="midsc">
+                                <h4>Middle school</h4>
+                                <img src="images/midhig.jpg" />
+                                <p>Chonkanyanukoon School</p>
+                            </div>
+                            <div class="highsc">
+                                <h4>High school</h4>
+                                <img src="images/midhig.jpg" />
+                                <p>Chonkanyanukoon School</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--card 3-->
+                <div class="card-3">
+                    <div class="content">
+                        <h2>03</h2>
+                        <h3>Hobbies</h3>
+                        <div class="hbcontent">
+                            <div class="listenin">
+                                <h4>Listen to music</h4>
+                                <img src="images/music.png" />
+                                <p>Now I'm addicted to a song called 'wa-r-r' by Colde!</p>
+                            </div>
+                            <div class="watchin">
+                                <h4>Watch a movie</h4>
+                                <img src="images/movie.png" />
+                                <p>My favorite movie is 'Pulp fiction' directed by Quentin Tarantino.</p>
+                            </div>
+                            <div class="readin">
+                                <h4>Read a book</h4>
+                                <img src="images/book.png" />
+                                <p>My favorite book is 'No Longer Human' written by Osamu Dazai.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--card 4-->
+                <div class="card-4">
+                    <div class="content">
+                        <h2>04</h2>
+                        <h3>My aim</h3>
+                        <p id="job">Doing well with my job.</p>
+                        <p id="health">Have a good health and well being,</p>
+                        <p id="rich">Lastly being rich!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".card-1",), {
+            max: 15,
+            speed: 200
+        });
+    </script>
+    <script>
+        VanillaTilt.init(document.querySelector(".card-2",), {
+            max: 10,
+            speed: 200
+        });
+    </script>
+    <script>
+        VanillaTilt.init(document.querySelector(".card-3",), {
+            max: 8,
+            speed: 200
+        });
+    </script>
+    <script>
+        VanillaTilt.init(document.querySelector(".card-4",), {
+            max: 18,
+            speed: 200
+        });
+    </script>
+</body>
+</html >
